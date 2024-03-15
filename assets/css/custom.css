@@ -1,0 +1,42 @@
+/* search section style */
+.search-input{
+    background-color: rgba(16, 15, 15, 0.05);
+    padding: 14px 0px 11px 45px;
+    width: 89%;
+    /* position: relative; */
+}
+.search-icon{
+    position: relative;
+    right: 87%;
+    color: #0000004f;
+}
+.search-btn{
+    position: absolute;
+    right: 22%;
+}
+/* phone crad style */
+.card-img-bg{
+    background-color: rgba(13, 110, 253, 0.05);
+    margin: 20px;
+    padding: 48px 0px;
+}
+.phone-card-title{
+    color: #403F3F;
+}
+.phone-description{
+    color: #706F6F;
+}
+.phone-price{
+    color: #403F3F
+}
+/* responsive style */
+@media screen and (max-width:576px) {
+    .search-input{
+        width: 89%;
+        font-size: 15px;
+        padding: 14px 0px 11px 26px;
+    }
+    .search-btn{
+        right: 6%;
+    }
+}

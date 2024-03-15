@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Hunter</title>
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/52d4052aca.js" crossorigin="anonymous"></script>
     <!-- dasy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- tailwindcss cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 <body>
     <!-- header -->
@@ -16,7 +20,24 @@
     </header>
     <!-- main -->
     <main>
-
+        <!-- search section -->
+        <section class="mb-12 mt-5">
+            <div class="container px-6 mx-auto">
+                <div class="w-3/4 mx-auto">
+                    <input id="search-phone" class="search-input outline-none rounded-lg" type="text" placeholder="Search your phone">
+                    <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                    <button onclick="clickSearchBtn()" class="search-btn text-lg font-medium md:text-xl md:font-semibold btn btn-primary">Search</button>
+                </div>
+            </div>
+        </section>
+        <!-- phone section -->
+        <section>
+            <div class="container px-6 mx-auto">
+                <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                </div>
+            </div>
+        </section>
     </main>
     <!-- footer -->
     <footer>
