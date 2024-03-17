@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -23,19 +25,48 @@
         <!-- search section -->
         <section class="mb-12 mt-5">
             <div class="container px-6 mx-auto">
+                <!-- search title -->
+                <h1 class="search-title text-center text-2xl md:text-4xl font-semibold mb-8">Search your phone</h1>
+                <!-- search box -->
                 <div class="w-3/4 mx-auto">
-                    <input id="search-phone" class="search-input outline-none rounded-lg" type="text" placeholder="Search your phone">
+                    <input id="search-phone" class="search-input outline-none rounded-lg" type="text"
+                        placeholder="Search your phone">
                     <i class="search-icon fa-solid fa-magnifying-glass"></i>
-                    <button onclick="clickSearchBtn()" class="search-btn text-lg font-medium md:text-xl md:font-semibold btn btn-primary">Search</button>
+                    <button onclick="clickSearchBtn()"
+                        class="search-btn text-lg font-medium md:text-xl md:font-semibold btn btn-primary">Search</button>
                 </div>
             </div>
         </section>
         <!-- phone section -->
         <section>
             <div class="container px-6 mx-auto">
-                <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
+                <!-- spinner or loaded -->
+                <div id="spiner-inner" class="text-center hidden">
+                    <span class="loading text-primary loading-ring loading-lg"></span>
                 </div>
+                <!-- all phone card wrapper -->
+                <div id="phone-card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                </div>
+                <div id="show-all-btn-inner" class="mt-6 mb-6 hidden">
+                    <button onclick="showAllData()" class="btn btn-primary font-bold text-xl w-40 block mx-auto">Show
+                        All</button>
+                </div>
+                <!-- open phone detais modal -->
+                <!-- Open the modal using ID.showModal() method -->
+                <dialog id="open_show_phone_modal" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box bg-white">
+                        <div id="phone-details-info-container">
+                            
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn btn-primary">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </section>
     </main>
@@ -46,4 +77,5 @@
     <!-- script -->
     <script src="./assets/scripts/phone.js"></script>
 </body>
+
 </html>
